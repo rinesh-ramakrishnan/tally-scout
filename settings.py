@@ -16,12 +16,13 @@ if SOURCE_TYPE == 'file':
         'name': 'Personal Expense Tracker - transactions.csv',
         'type': 'csv',
         'location': r'data',
-        'columns': ('id', 'date', 'amount', 'type', 'description', 'bank', 'payment_mode'),
+        'columns': ('id', 'date', 'amount', 'type', 'sub_type', 'description', 'bank', 'payment_mode'),
         'datatype': {
             'id': np.int8, 
             'date': np.str_, 
             'amount': np.float64, 
             'type': np.str_,
+            'sub_type': np.str_,
             'description': np.str_, 
             'bank': np.str_, 
             'payment_mode': np.str_,
@@ -32,9 +33,10 @@ if SOURCE_TYPE == 'file':
             'date': {'position': 2, 'data_type': 'DATE'}, 
             'amount': {'position': 3, 'data_type': 'NUMERIC'}, 
             'type': {'position': 4, 'data_type': 'TEXT'},
-            'description': {'position': 5, 'data_type': 'TEXT'}, 
-            'bank': {'position': 6, 'data_type': 'TEXT'}, 
-            'payment_mode': {'position': 7, 'data_type': 'TEXT'},
+            'sub_type': {'position': 5, 'data_type': 'TEXT'},
+            'description': {'position': 6, 'data_type': 'TEXT'}, 
+            'bank': {'position': 7, 'data_type': 'TEXT'}, 
+            'payment_mode': {'position': 8, 'data_type': 'TEXT'},
         },
     }
 
